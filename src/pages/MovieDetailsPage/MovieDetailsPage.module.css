@@ -1,0 +1,64 @@
+.button {
+  font-size: 16px;
+  background-color: transparent;
+  margin-left: 25px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-style: none;
+  background-color: #f8f8ff;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+.button:hover {
+  background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+}
+.wrapper {
+  border-bottom: 1px solid gray;
+  display: flex;
+  padding: 0px 0 15px 15px;
+}
+.box {
+  margin-right: 10px;
+  min-width: 300px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.box__text {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+.text {
+  margin-bottom: 15px;
+}
+.list {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+.box__link {
+  padding: 15px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+.item {
+  padding: 5px;
+  margin-left: 30px;
+}
+.genre {
+  margin-left: 10px;
+}
