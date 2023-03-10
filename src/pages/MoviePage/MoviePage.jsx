@@ -9,7 +9,7 @@ import MovieList from "../../components/MovieList/MovieList";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
-  const [error] = useState('');
+  const [error,setError] = useState('');
 
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get('search');
@@ -21,7 +21,7 @@ const Movies = () => {
         const { data } = await getSearchMovie (search);
         setMovies(data.results);
       } catch (error) {
-          Notify.failure(`Sorry something went wrong. ${error.message}`);
+           setError( Notify.failure(`Something went wrong. ${error.message}`));
       }
     };
     if (search) {

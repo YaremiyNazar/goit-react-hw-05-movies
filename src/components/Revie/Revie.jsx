@@ -8,7 +8,7 @@ import css from "../Revie/Revie.module.css"
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error,setError] = useState('');
   const params = useParams();
 
   useEffect(() => {
@@ -17,8 +17,7 @@ const Reviews = () => {
         const { data } = await getReviews(params.movieId);
         setReviews(data.results);
       } catch (error) {
-        setError(error);
-        Notify.failure(`Sorry something went wrong. ${error.message}`);
+        setError( Notify.failure(`Something went wrong. ${error.message}`));
       } finally {
         setIsLoading(false);
       }

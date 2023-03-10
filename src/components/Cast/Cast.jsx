@@ -33,7 +33,6 @@ const Cast = () => {
       {!profile_path && (
         <img className={css.img} src={notFoundImg} alt={name} width="200" />
       )}
-
       <p className={css.text}>{name}</p>
       <p className={css.text}>Character: {character}</p>
     </li>

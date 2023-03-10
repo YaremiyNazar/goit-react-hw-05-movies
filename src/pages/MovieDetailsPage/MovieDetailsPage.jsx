@@ -8,7 +8,7 @@ import notFoundImg from "../../helpers/logo192.png"
 
 const MovieDetails = () => {
   const [details, setDetails] = useState([]);
-  const [error] = useState('');
+  const [error,setError] = useState('');
 
   const params = useParams();
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const MovieDetails = () => {
         const { data } = await getMovieParams(params.movieId);
         setDetails(data);
       } catch (error) {
-        Notify.failure(`Sorry something went wrong. ${error.message}`);
+        setError( Notify.failure(`Something went wrong. ${error.message}`));
       }
     };
 

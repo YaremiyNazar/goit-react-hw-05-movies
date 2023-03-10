@@ -5,7 +5,7 @@ import MovieList from '../MovieList/MovieList';
 
 const TrendingMovies = () => {
   const [trend, setTrend] = useState([]);
-  const [error] = useState('');
+  const [error,setError] = useState('');
 
   useEffect(() => {
     const fetchTrend = async () => {
@@ -13,7 +13,7 @@ const TrendingMovies = () => {
         const { data } = await getTrending();
         setTrend(data.results);
       } catch (error) {
-       Notify.failure(`Sorry something went wrong. ${error.message}`);
+       setError( Notify.failure(`Something went wrong. ${error.message}`));
       }
     };
     fetchTrend();
